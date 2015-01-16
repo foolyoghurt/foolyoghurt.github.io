@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014/2 | Hexo</title>
+  <title>Archives: 2014/2 | 扑爬</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="Less is more">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2014/02/">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:title" content="扑爬">
+<meta property="og:url" content="http://foolyoghurt.github.io/archives/2014/02/">
+<meta property="og:site_name" content="扑爬">
+<meta property="og:description" content="Less is more">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="扑爬">
+<meta name="twitter:description" content="Less is more">
 
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="扑爬" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.jpg">
@@ -36,8 +36,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">扑爬</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Less is more</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -58,7 +62,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://foolyoghurt.github.io"></form>
       </div>
     </div>
   </div>
@@ -66,62 +70,36 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-腾讯前端特工解题报告" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/02/15/腾讯前端特工解题报告/" class="article-date">
-  <time datetime="2014-02-15T06:32:14.000Z" itemprop="datePublished">Feb 15 2014</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2014" class="archive-year">2014</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/02/15/腾讯前端特工解题报告/" class="archive-article-date">
+  <time datetime="2014-02-15T06:32:14.000Z" itemprop="datePublished">2月 15</time>
 </a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        <i class="fa fa-file-text-o"></i>
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/02/15/腾讯前端特工解题报告/">腾讯前端特工解题报告</a>
+      <a class="archive-article-title" href="/2014/02/15/腾讯前端特工解题报告/">腾讯前端特工解题报告</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>网站链接：<a href="http://codestar.alloyteam.com/" target="_blank" rel="external">腾讯前端攻略</a></p>
-<h2 id="第一关，抓包">第一关，抓包</h2>
-<p>提示要抓包，于是查看在chrome查看response header，提示说『请设置隐藏域的值』，于是查了下网页的html代码，发现有一个隐藏域</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">"hidden"</span> name=<span class="string">"timestamp"</span>&gt;</div></pre></td></tr></table></figure>
-
-<p>于是猜测是要设置timestamp的值，就用Javascript在Chrome控制台中试了一下，果然对了:)</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementsByName(<span class="string">'timestamp'</span>).value = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime()</div></pre></td></tr></table></figure>
-
-
-        
-          <p class="article-more-link">
-            <a href="/2014/02/15/腾讯前端特工解题报告/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/02/15/腾讯前端特工解题报告/" data-title="腾讯前端特工解题报告" data-id="5lff4ioaypqoyzpj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
+  
+    </div></section>
   
 </section>
         
