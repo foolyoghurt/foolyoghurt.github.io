@@ -25,7 +25,7 @@
         text-align: center;
         font-size: 20px;
     }
-    .btn-go {
+    .btn-large {
         display: block;
         width: 80px;
         margin: 0 auto;
@@ -38,7 +38,7 @@
         cursor: pointer;
         transition: .4s;
     }
-    .btn-go:hover {
+    .btn-large:hover {
         background: #fff;
         color: #333;
         transition: .4s;
@@ -57,13 +57,27 @@
         text-align: center;
         font-size: 14px;
     }
-
+    #btn-change-bkg {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 100px;
+    }
+    #input-change-bkg {
+        opacity: 0;
+        position: absolute;
+        right: 170px;
+        top: 20px;
+        width: 200px;
+        padding: 13px;
+        font-size: .8rem;
+        transition: .3s;
+    }
     @media screen and (max-width: 767px) {
         .intro {
             padding: 0 60px;
         }
     }
-
     @media screen and (max-width: 479px) {
         body {
             background: url("wormhole-vertical.jpg");
@@ -83,12 +97,12 @@
             font-size: 1rem;
             text-align: left;
         }
-        .btn-go {
+        .btn-large {
             width: 120px;
             font-size: 1.2rem;
             padding: .4rem;
         }
-        .btn-go:hover {
+        .btn-large:hover {
             background: #fff;
             color: #333;
             transition: .4s;
@@ -121,13 +135,17 @@
             无论是电脑还是手机，也不管是Wi-Fi抑或是4G还是3G，随时随地拉近与世界的距离。 让一切变得简单而自然，它将成为你不可或缺的一部分。
         </div>
     </div>
-    <a class="btn-go">
+    <a class="btn-go btn-large">
         即刻穿梭
     </a>
     <div class="msg-box" id="msg-box"></div>
     <div id="footer">
         Copyright © 2014 wormhole. All rights reserved.
     </div>
+    <div class="btn-change-bkg btn-large" id="btn-change-bkg">
+        更改背景图片
+    </div>
+    <input class="input-change-bkg" id="input-change-bkg" placeholder="输入背景图片 url">
 </body>
 <script>
 // 循环显示消息
@@ -161,6 +179,25 @@
         changeMsgBoxText();
     }, 5000);
 })();
+
+// 更改背景图片
+var $chgBkgBtn = document.getElementById('btn-change-bkg');
+var $chgBkgInput = document.getElementById('input-change-bkg');
+var chgBkgInputShown = false;
+$chgBkgBtn.addEventListener('click', function(e) {
+    if (!chgBkgInputShown) {
+        $chgBkgInput.style.opacity = 1;
+        $chgBkgBtn.textContent = '确定';
+    } else {
+        // 确定更改
+        $chgBkgInput.style.opacity = 0;
+        $chgBkgBtn.textContent = '更改背景图片';
+        var bkg = $chgBkgInput.value;
+        document.body.style.backgroundImage = 'url("' + bkg + '")';
+    }
+
+    chgBkgInputShown = !chgBkgInputShown;
+});
 </script>
 
 </html>
