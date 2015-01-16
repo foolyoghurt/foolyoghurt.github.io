@@ -122,6 +122,20 @@
             font-size: .7rem;
             color: #aaa;
         }
+        #btn-change-bkg {
+            position: absolute;
+            top: 20px;
+            right: 5px;
+            width: 80px;
+            font-size: .8rem;
+        }
+        #input-change-bkg {
+            right: 110px;
+            width: 170px;
+            padding: 7px;
+            line-height: 1.1rem;
+            font-size: .7rem;
+        }
     }
     </style>
 </head>
@@ -189,7 +203,7 @@ $chgBkgBtn.addEventListener('click', function(e) {
         $chgBkgInput.style.opacity = 1;
         $chgBkgBtn.textContent = '确定';
     } else {
-        
+
         // 确定更改
         $chgBkgInput.style.opacity = 0;
         $chgBkgBtn.textContent = '更改背景图片';
