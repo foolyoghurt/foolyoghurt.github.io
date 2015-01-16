@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>腾讯前端特工解题报告 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="网站链接：腾讯前端攻略
+第一关，抓包
+提示要抓包，于是查看在chrome查看response header，提示说『请设置隐藏域的值』，于是查了下网页的html代码，发现有一个隐藏域
+1&lt;input type='hidden' name='timestamp'&gt;
+
+于是猜测是要设置timestamp的值，就用Javascript在Chrome控制台中试了一下，果然对了:)
+1docum">
+<meta property="og:type" content="article">
+<meta property="og:title" content="腾讯前端特工解题报告">
+<meta property="og:url" content="http://yoursite.com/2014/02/15/腾讯前端特工解题报告/">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="网站链接：腾讯前端攻略
+第一关，抓包
+提示要抓包，于是查看在chrome查看response header，提示说『请设置隐藏域的值』，于是查了下网页的html代码，发现有一个隐藏域
+1&lt;input type='hidden' name='timestamp'&gt;
+
+于是猜测是要设置timestamp的值，就用Javascript在Chrome控制台中试了一下，果然对了:)
+1docum">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="腾讯前端特工解题报告">
+<meta name="twitter:description" content="网站链接：腾讯前端攻略
+第一关，抓包
+提示要抓包，于是查看在chrome查看response header，提示说『请设置隐藏域的值』，于是查了下网页的html代码，发现有一个隐藏域
+1&lt;input type='hidden' name='timestamp'&gt;
+
+于是猜测是要设置timestamp的值，就用Javascript在Chrome控制台中试了一下，果然对了:)
+1docum">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">存档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-腾讯前端特工解题报告" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/02/15/腾讯前端特工解题报告/" class="article-date">
+  <time datetime="2014-02-15T06:32:14.000Z" itemprop="datePublished">Feb 15 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        <i class="fa fa-file-text-o"></i>
+        
+  
+    <h1 class="article-title" itemprop="name">
+      腾讯前端特工解题报告
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>网站链接：<a href="http://codestar.alloyteam.com/" target="_blank" rel="external">腾讯前端攻略</a></p>
+<h2 id="第一关，抓包">第一关，抓包</h2>
+<p>提示要抓包，于是查看在chrome查看response header，提示说『请设置隐藏域的值』，于是查了下网页的html代码，发现有一个隐藏域</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">"hidden"</span> name=<span class="string">"timestamp"</span>&gt;</div></pre></td></tr></table></figure>
+
+<p>于是猜测是要设置timestamp的值，就用Javascript在Chrome控制台中试了一下，果然对了:)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementsByName(<span class="string">'timestamp'</span>).value = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime()</div></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2 id="第二关，CSS绘图">第二关，CSS绘图</h2>
+<p>考察用CSS绘制简单的椭圆、三角形。就是考察对<code>border</code>和<code>border-radius</code>的理解以及会用css3中的旋转，没什么可说的，查看w3schools上的文档。不过需要注意的是题目中三角形指出了一定要绕某个点旋转，所以必须指定<code>transform-origin</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 椭圆</span></div><div class="line"><span class="attribute">border-radius</span><span class="value">: <span class="number">50%</span>;</span></div><div class="line"><span class="comment">// 三角形</span></div><div class="line"><span class="attribute">border-color</span><span class="value">: transparent black;</span></div><div class="line">-webkit-<span class="attribute">transform-origin</span><span class="value">: top right;</span></div><div class="line">-webkit-<span class="attribute">transform</span><span class="value">: <span class="function">rotate</span>(-<span class="number">60deg</span>);</span></div></pre></td></tr></table></figure>
+
+<h2 id="第三关，坦克大战">第三关，坦克大战</h2>
+<p>这个。。。涉及到游戏，真的是没有兴趣也压根不会，所以果断去网上找了一个代码，涉及到版权，就不贴出来了。。。</p>
+<h2 id="第四关，JS基础">第四关，JS基础</h2>
+<p>第四题是最简单的一道，就是javascript的一些基本的使用方法，也就是语法，分三道题全是填空，下面&lt;&gt;表示要填的空</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 1. 数组克隆（数组元素非引用类型） */</span></div><div class="line"><span class="keyword">var</span> <span class="keyword">clone</span> = <span class="function"><span class="keyword">function</span><span class="params">(arr)</span></span>{</div><div class="line">    <span class="keyword">return</span> &lt;&gt;</div><div class="line">};</div><div class="line"><span class="comment">// 答案：arr.slice()</span></div><div class="line"></div><div class="line"><span class="comment">/* 2. 去除字符串首尾空格 */</span></div><div class="line"><span class="keyword">var</span> trim = <span class="function"><span class="keyword">function</span><span class="params">(s)</span></span>{</div><div class="line">    <span class="keyword">return</span> &lt;&gt;</div><div class="line">};</div><div class="line"><span class="comment">// 答案：s.trim()</span></div><div class="line"></div><div class="line"><span class="comment">/* 3. 将Nodelist对象转换为数组对象 */</span></div><div class="line"><span class="keyword">var</span> arrify = <span class="function"><span class="keyword">function</span><span class="params">(list)</span></span>{</div><div class="line">    <span class="keyword">return</span> &lt;&gt;</div><div class="line">};</div><div class="line"><span class="comment">// 答案：Array.prototype.slice.call(list)</span></div></pre></td></tr></table></figure>
+
+<h2 id="第五关，求最大值">第五关，求最大值</h2>
+<p>这是最有意思的一个题，综合了DOM操作、算法方面的知识。由于是求最值，设<code>r[i][j]</code>为第0层到第i层的第j个节点的数字和的最大值（i和j均从0开始计数），data[i][j]为第i行j列的数字值，则</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">r[<span class="link_label">i</span>][<span class="link_reference">j</span>] = max(r[<span class="link_label">i-1</span>][<span class="link_reference">j-1</span>], r[<span class="link_label">i-1</span>][<span class="link_reference">j</span>]) + data[<span class="link_label">i</span>][<span class="link_reference">j</span>]  // i &gt; 0, i &gt; j &gt; 0,</div><div class="line">r[<span class="link_label">i</span>][<span class="link_reference">j</span>] = r[<span class="link_label">i-1</span>][<span class="link_reference">0</span>] + data[<span class="link_label">i</span>][<span class="link_reference">j</span>]                    // i &gt; 0, j = 0</div><div class="line">r[<span class="link_label">i</span>][<span class="link_reference">j</span>] = r[<span class="link_label">i-1</span>][<span class="link_reference">i-1</span>] + data[<span class="link_label">i</span>][<span class="link_reference">j</span>]                  // i &gt; 0, j = i</div></pre></td></tr></table></figure>
+
+<p>然后为了输出路径，倒序遍历r数组，倒序输出节点，并在图中选中节点。为了方便，引入jquery，方便对DOM树的操作。时间空间复杂度均为<code>O(N)</code>，N是节点数，如果不是因为要自动选中图中的节点，而选中节点是又必须是从第二层开始<strong>依次序</strong>逐层选中的话，空间复杂度可以是O(n)，n为最后一层的节点数。以下是代码实现</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 引入jquery，以便使用jquery操作DOM。贴代码是要先贴这一段再贴其他的，以免jquery库还未加载完毕</span></div><div class="line"><span class="keyword">var</span> s = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">s.src = <span class="string">"http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"</span>;</div><div class="line"><span class="built_in">document</span>.body.appendChild(s);</div><div class="line"></div><div class="line"><span class="keyword">var</span> record = [[+$($(<span class="string">'#box&gt;div&gt;span'</span>)[<span class="number">0</span>]).text()]];</div><div class="line"><span class="keyword">var</span> $rows = $(<span class="string">'#box&gt;div'</span>);</div><div class="line"><span class="comment">// 行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; $rows.length; i++) {</div><div class="line">    <span class="keyword">var</span> row = $rows[i]</div><div class="line">    <span class="keyword">var</span> $cols = $(row).children(<span class="string">'span'</span>)</div><div class="line">    record.push([])</div><div class="line">    <span class="comment">// 列</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; $cols.length; j++) {</div><div class="line">        <span class="keyword">var</span> num = +$($cols[j]).text()</div><div class="line">        <span class="keyword">switch</span> (j) {</div><div class="line">            <span class="keyword">case</span> <span class="number">0</span>: record[i][j] = record[i-<span class="number">1</span>][<span class="number">0</span>] + num;<span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> i: record[i][j] = record[i-<span class="number">1</span>][i-<span class="number">1</span>] + num;<span class="keyword">break</span>;</div><div class="line">            <span class="keyword">default</span>: record[i][j] = <span class="built_in">Math</span>.max(record[i-<span class="number">1</span>][j-<span class="number">1</span>], record[i-<span class="number">1</span>][j]) + num;</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">// 找到产生最大值的路径中最深层次的节点的下标</span></div><div class="line"><span class="keyword">var</span> max = <span class="number">0</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k = <span class="number">1</span>; k &lt; record[i-<span class="number">1</span>].length; k++) {</div><div class="line">    <span class="keyword">if</span> (record[i-<span class="number">1</span>][k] &gt; record[i-<span class="number">1</span>][max]) {</div><div class="line">        max = k</div><div class="line">    }</div><div class="line">}</div><div class="line"><span class="keyword">var</span> path = []</div><div class="line"><span class="comment">// 从第一层节点到当前层节点数字之和的最大值</span></div><div class="line"><span class="keyword">var</span> sum = record[i-<span class="number">1</span>][max]</div><div class="line"></div><div class="line"><span class="comment">// 从倒数第二层开始往回遍历，倒序输出路径</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = record.length-<span class="number">1</span>; i--;) {</div><div class="line">    <span class="keyword">var</span> r = record[i]</div><div class="line">    <span class="keyword">var</span> a = max ? r[max-<span class="number">1</span>] : -<span class="number">1</span></div><div class="line">    <span class="keyword">var</span> b = (max == i+<span class="number">1</span>) ? -<span class="number">1</span> : r[max]</div><div class="line">    <span class="keyword">var</span> t = max</div><div class="line">    <span class="comment">// 最大值路径在当前层中的节点下标</span></div><div class="line">    <span class="keyword">if</span> (a &gt; b) {</div><div class="line">        max--;</div><div class="line">    }</div><div class="line">    <span class="comment">// 实际存的是上一层的节点</span></div><div class="line">    path.push([t, sum - r[max]])</div><div class="line">    sum = r[max]</div><div class="line">}</div><div class="line"><span class="comment">// 选中图中的节点</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">2</span>; $rows.length; i++) {</div><div class="line">    <span class="keyword">var</span> node = path.pop()</div><div class="line">    $($(<span class="string">'#box'</span>).children(<span class="string">'#row_'</span> + i).children()[node[<span class="number">0</span>]]).click()</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'%d -&gt; %d'</span>, i, node[<span class="number">1</span>])</div><div class="line">}</div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/02/15/腾讯前端特工解题报告/" data-title="腾讯前端特工解题报告" data-id="5lff4ioaypqoyzpj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2013/07/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"asong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/css/" style="font-size: NaNpx;">css</a><a href="/tags/hexo/" style="font-size: NaNpx;">hexo</a><a href="/tags/js/" style="font-size: NaNpx;">js</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/02/15/腾讯前端特工解题报告/">腾讯前端特工解题报告</a>
+          </li>
+        
+          <li>
+            <a href="/2013/07/26/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=1768698357&verifier=8e94b428&dpc=1"></iframe>
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Song<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">存档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
